@@ -15,7 +15,7 @@ plot3<- function(){
   plot(strptime(paste(as.Date(datasub$Date,format="%d/%m/%Y"),datasub$Time), "%Y-%m-%d %H:%M:%S"),
        as(datasub$Sub_metering_1,"numeric"), type="n",xlab="Energy Sub Power (kilowats)",ylab="")
        
-  lines(strptime(paste(as.Date(datasub$Date,format="%m/%d/%Y"),datasub$Time), "%Y-%m-%d %H:%M:%S"),as(datasub$Sub_metering_1,"numeric"))
+  lines(strptime(paste(as.Date(datasub$Date,format="%d/%m/%Y"),datasub$Time), "%Y-%m-%d %H:%M:%S"),as(datasub$Sub_metering_1,"numeric"))
   
   lines(strptime(paste(as.Date(datasub$Date,format="%d/%m/%Y"),datasub$Time), "%Y-%m-%d %H:%M:%S"),
        as(datasub$Sub_metering_2,"numeric"),col="red")
