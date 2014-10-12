@@ -11,6 +11,7 @@ plot3<- function(){
   png(file="plot3.png", height=480, width = 480)
   
     ##Draws the plot as requested
+  
  
   plot(strptime(paste(as.Date(datasub$Date,format="%d/%m/%Y"),datasub$Time), "%Y-%m-%d %H:%M:%S"),
        as(datasub$Sub_metering_1,"numeric"), type="n",xlab="Energy Sub Power (kilowats)",ylab="")
