@@ -6,7 +6,7 @@ plot1<- function(){
 
   ##subsets the data for the dates we care about
 
-  datasub<-data[data$Date %in% c("2/1/2007","2/2/2007"),]
+  datasub<-data[data$Date %in% c("1/2/2007","2/2/2007"),]
   
   png(file="plot1.png", height=480, width = 480)
   
