@@ -7,16 +7,14 @@ plot1<- function(){
   ##subsets the data for the dates we care about
 
   datasub<-data[data$Date %in% c("2/1/2007","2/2/2007"),]
-  
-  png(file="plot1.png", height=480, width = 480)
-  
+  print(datasub[1:10,])
+
   ##Draws the plot as requested
-  hist(as(datasub$Global_active_power,"numeric"), axes=FALSE, col="red",xlab="Global Active Power (kilowatts)", main="Global Active Power")
+  hist(as(datasub$Global_active_power,"numeric"), col="red",xlab="Global Active Power (kilowatts)", main="Global Active Power")
   
-  ##add axis at matching intervals to the smaple
-  axis(1, at=c(0,2, 4, 6))
-  axis(2, at=c(0,200, 400, 600, 800,1000,1200))
+  ##Copy plot fomr screen device to a file
   
+  dev.copy(png, file="plot1.png")
   dev.off()
 
 }
